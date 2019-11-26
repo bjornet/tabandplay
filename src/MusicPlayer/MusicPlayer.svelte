@@ -21,13 +21,13 @@
 
   function loadMusicPlayerElements() {
     MusicPlayerInit()
-}
+  }
 </script>
 
 <style>
-    .spotify-player {
-        background: whitesmoke;
-    }
+  .spotify-player {
+    background: whitesmoke;
+  }
 </style>
 
 <svelte:head>
@@ -35,10 +35,10 @@
 </svelte:head>
 
 <section class="spotify-player">
-  {#if musicPlayerReady}
-    <img id="current-track" alt="track-image" src="images/MusicPlayer/tape.png" height="300" />
-    <h3 id="current-track-title">Track title</h3>
-  {:else}
+  {#if !musicPlayerReady}
     ...loader
+  {:else}
+    <img id="current-track" alt="track-image" src="images/MusicPlayer/tape.png" height="300" />
+    <h3 id="current-track-title">&nbsp;</h3>
   {/if}
 </section>

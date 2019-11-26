@@ -1,7 +1,7 @@
 <style>
-    .tab {
-        background: pink;
-    }
+  .tab {
+    background: pink;
+  }
 </style>
 
 <section class="tab">
